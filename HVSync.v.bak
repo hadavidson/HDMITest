@@ -1,0 +1,19 @@
+module HVSync(pixclk, CounterX, CounterY, hSync, vSync, DrawArea);
+	//define in and out
+	input pixclk;
+	output [12:0] CounterX, CounterY;
+	output hSync, vSync, DrawArea;
+	
+	//create regisiters
+	reg [12:0] CounterX, CounterY;
+	reg hSync, vSync, DrawArea;
+	
+	//main code
+	always @(posedge pixclk) DrawArea <= (CounterX<1280) && (CounterY<720);
+
+	always @(posedge pixclk) CounterX <= (CounterX==1649) ? 0 : CounterX+1;
+	always @(posedge pixclk) if(CounterX==1649) CounterY <= (CounterY==749) ? 0 : CounterY+1;
+
+	always @(posedge pixclk) hSync <= (CounterX>=1390) && (CounterX<1430);
+	always @(posedge pixclk) vSync <= (CounterY>=725) && (CounterY<730);
+endmodule

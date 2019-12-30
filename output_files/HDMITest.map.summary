@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Dec 29 22:42:55 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : HDMITest
+Top-level Entity Name : HDMI_test
+Family : Cyclone IV E
+Total logic elements : 152
+    Total combinational functions : 143
+    Dedicated logic registers : 92
+Total registers : 92
+Total pins : 21
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

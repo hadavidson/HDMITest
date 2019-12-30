@@ -1,0 +1,42 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\myps3\Documents\Quartus\HDMITest\HDMITest.qsys --block-symbol-file --output-directory=C:\Users\myps3\Documents\Quartus\HDMITest\HDMITest --family="Cyclone IV E" --part=EP4CE22F17C6
+Progress: Loading HDMITest/HDMITest.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 18.1]
+Progress: Parameterizing module new_sdram_controller_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: HDMITest.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Warning: HDMITest.new_sdram_controller_0: new_sdram_controller_0.wire must be exported, or connected to a matching conduit.
+Warning: HDMITest.new_sdram_controller_0: new_sdram_controller_0.s1 must be connected to an Avalon-MM master
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\myps3\Documents\Quartus\HDMITest\HDMITest.qsys --synthesis=VERILOG --output-directory=C:\Users\myps3\Documents\Quartus\HDMITest\HDMITest\synthesis --family="Cyclone IV E" --part=EP4CE22F17C6
+Progress: Loading HDMITest/HDMITest.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding new_sdram_controller_0 [altera_avalon_new_sdram_controller 18.1]
+Progress: Parameterizing module new_sdram_controller_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: HDMITest.new_sdram_controller_0: SDRAM Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Warning: HDMITest.new_sdram_controller_0: new_sdram_controller_0.wire must be exported, or connected to a matching conduit.
+Warning: HDMITest.new_sdram_controller_0: new_sdram_controller_0.s1 must be connected to an Avalon-MM master
+Info: HDMITest: Generating HDMITest "HDMITest" for QUARTUS_SYNTH
+Info: new_sdram_controller_0: Starting RTL generation for module 'HDMITest_new_sdram_controller_0'
+Info: new_sdram_controller_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_new_sdram_controller/generate_rtl.pl --name=HDMITest_new_sdram_controller_0 --dir=C:/Users/myps3/AppData/Local/Temp/alt8191_8473156528569619062.dir/0002_new_sdram_controller_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/myps3/AppData/Local/Temp/alt8191_8473156528569619062.dir/0002_new_sdram_controller_0_gen//HDMITest_new_sdram_controller_0_component_configuration.pl  --do_build_sim=0  ]
+Info: new_sdram_controller_0: Done RTL generation for module 'HDMITest_new_sdram_controller_0'
+Info: new_sdram_controller_0: "HDMITest" instantiated altera_avalon_new_sdram_controller "new_sdram_controller_0"
+Info: rst_controller: "HDMITest" instantiated altera_reset_controller "rst_controller"
+Info: HDMITest: Done "HDMITest" with 3 modules, 5 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

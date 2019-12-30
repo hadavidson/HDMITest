@@ -1,0 +1,9 @@
+module loadRam(input mem_clk, output reg [23:0] wrAddr, output reg [15:0] wrData, output reg wrEnable)
+	initial
+	begin
+		wrAddr <= 24'h000000;
+		wrData <= 16'hffff;
+		wrEnable <= 1;
+		wrEnable <= 0;
+	end
+endmodule

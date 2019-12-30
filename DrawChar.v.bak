@@ -1,0 +1,186 @@
+module DrawChar(input pixclk, drCh, input [9:0] desX, desY, output reg pix, charDone)
+	//pixel and color
+	always @(posedge pixclk)
+	begin
+		if(drCh)
+		begin
+			color <= 'hFF;
+			if(CounterY==desY)
+			begin
+				if(CounterX==1)
+					pix<='b0;
+				else if(CounterX==2)
+					pix='b1;
+				else if(CounterX==3)
+					pix<='b1;
+				else if(CounterX==4)
+					pix<='b1;
+				else if(CounterX==5)
+					pix<='b1;
+				else if(CounterX==6)
+					pix<='b1;
+				else if(CounterX==7)
+					pix<='b0;
+				else if(CounterX==8)
+					pix<='b0;
+				else
+					pix<='b0;
+			end
+			else if(CounterY==(desY+1))
+			begin
+				if(CounterX==1)
+					pix<='b1;
+				else if(CounterX==2)
+					pix<='b1;
+				else if(CounterX==3)
+					pix<='b0;
+				else if(CounterX==4)
+					pix<='b0;
+				else if(CounterX==5)
+					pix<='b0;
+				else if(CounterX==6)
+					pix<='b1;
+				else if(CounterX==7)
+					pix<='b1;
+				else if(CounterX==8)
+					pix<='b0;
+				else
+					pix<='b0;
+			end
+			else if(CounterY==(desY+2))
+			begin
+				if(CounterX==1)
+					pix<='b1;
+				else if(CounterX==2)
+					pix<='b1;
+				else if(CounterX==3)
+					pix<='b0;
+				else if(CounterX==4)
+					pix<='b0;
+				else if(CounterX==5)
+					pix<='b1;
+				else if(CounterX==6)
+					pix<='b1;
+				else if(CounterX==7)
+					pix<='b1;
+				else if(CounterX==8)
+					pix<='b0;
+				else
+					pix<='b0;
+			end
+			else if(CounterY==(desY+3))
+			begin
+				if(CounterX==1)
+					pix<='b1;
+				else if(CounterX==2)
+					pix<='b1;
+				else if(CounterX==3)
+					pix<='b0;
+				else if(CounterX==4)
+					pix<='b1;
+				else if(CounterX==5)
+					pix<='b1;
+				else if(CounterX==6)
+					pix<='b1;
+				else if(CounterX==7)
+					pix<='b1;
+				else if(CounterX==8)
+					pix<='b0;
+				else
+					pix<='b0;
+			end
+			else if(CounterY==(desY+4))
+			begin
+				if(CounterX==1)
+					pix<='b1;
+				else if(CounterX==2)
+					pix<='b1;
+				else if(CounterX==3)
+					pix<='b1;
+				else if(CounterX==4)
+					pix<='b1;
+				else if(CounterX==5)
+					pix<='b0;
+				else if(CounterX==6)
+					pix<='b1;
+				else if(CounterX==7)
+					pix<='b1;
+				else if(CounterX==8)
+					pix<='b0;
+				else
+					pix='b0;
+			end
+			else if(CounterY==(desY+5))
+			begin
+				if(CounterX==1)
+					pix<='b1;
+				else if(CounterX==2)
+					pix<='b1;
+				else if(CounterX==3)
+					pix<='b1;
+				else if(CounterX==4)
+					pix<='b0;
+				else if(CounterX==5)
+					pix<='b0;
+				else if(CounterX==6)
+					pix<='b1;
+				else if(CounterX==7)
+					pix<='b1;
+				else if(CounterX==8)
+					pix<='b0;
+				else
+					pix<='b0;
+			end
+			else if(CounterY==(desY+6))
+			begin
+				if(CounterX==1)
+					pix<='b0;
+				else if(CounterX==2)
+					pix<='b1;
+				else if(CounterX==3)
+					pix<='b1;
+				else if(CounterX==4)
+					pix<='b1;
+				else if(CounterX==5)
+					pix<='b1;
+				else if(CounterX==6)
+					pix<='b1;
+				else if(CounterX==7)
+					pix='b1;
+				else if(CounterX==8)
+					pix<='b0;
+				else
+					pix<='b0;
+			end
+			else if(CounterY==(desY+7))
+			begin
+				if(CounterX==1)
+					pix<='b0;
+				else if(CounterX==2)
+					pix<='b0;
+				else if(CounterX==3)
+					pix<='b0;
+				else if(CounterX==4)
+					pix<='b0;
+				else if(CounterX==5)
+					pix<='b0;
+				else if(CounterX==6)
+					pix<='b0;
+				else if(CounterX==7)
+					pix<='b0;
+				else if(CounterX==8)
+					pix<='b0;
+				else
+				begin
+					pix='b0;
+					charDone <= 1;
+				end
+			end
+			else
+				pix <= 0;
+		end
+		else
+			pix <='b0;
+			charDone <='b;
+	end
+endmodule

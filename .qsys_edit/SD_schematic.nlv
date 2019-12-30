@@ -1,0 +1,11 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst SD -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst SD.new_sdram_controller_0 -pg 1 -lvl 2 -y 30
+preplace inst SD.clk_0 -pg 1 -lvl 1 -y 30
+preplace netloc EXPORT<net_container>SD</net_container>(SLAVE)clk_0.clk_in,(SLAVE)SD.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>SD</net_container>(SLAVE)SD.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>SD</net_container>(MASTER)clk_0.clk_reset,(SLAVE)new_sdram_controller_0.reset) 1 1 1 N
+preplace netloc POINT_TO_POINT<net_container>SD</net_container>(MASTER)clk_0.clk,(SLAVE)new_sdram_controller_0.clk) 1 1 1 N
+levelinfo -pg 1 0 50 450
+levelinfo -hier SD 60 90 310 440

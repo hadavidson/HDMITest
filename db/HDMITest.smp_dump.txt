@@ -1,0 +1,11 @@
+
+State Machine - |HDMI_test|pixRd
+Name pixRd.0111 pixRd.0110 pixRd.0101 pixRd.0100 pixRd.0011 pixRd.0010 pixRd.0001 pixRd.0000 
+pixRd.0000 0 0 0 0 0 0 0 0 
+pixRd.0001 0 0 0 0 0 0 1 1 
+pixRd.0010 0 0 0 0 0 1 0 1 
+pixRd.0011 0 0 0 0 1 0 0 1 
+pixRd.0100 0 0 0 1 0 0 0 1 
+pixRd.0101 0 0 1 0 0 0 0 1 
+pixRd.0110 0 1 0 0 0 0 0 1 
+pixRd.0111 1 0 0 0 0 0 0 1 
