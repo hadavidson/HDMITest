@@ -2,34 +2,35 @@ module HDMI_test(input clk, output [2:0] TMDSp, TMDSn, output TMDSp_clock, TMDSn
 
 ///////////////////////////////////////////////////////////////////////////////
 	//create variables
-	
+
 	//pic variables
 	reg [7:0] red, green, blue;
 	wire [11:0] x, y;
 	wire pixclk, clk_TMDS, hSync, vSync, DrawArea, animate;
-		 
+
 ///////////////////////////////////////////////////////////////////////////////
 	//call modules
-	
+
 	//create clocks
 	pixelClk pxlc(.inclk0(clk),.c0(pixclk),.c1(clk_TMDS));
 	sdramPll sdrc(.inclk0(clk),.c0(mem_clk));
-	
+
 	//create HDMI sync points
 	HvSync HVS1 (.pixclk(pixclk), .CounterX(x), .CounterY(y), .hSync(hSync), .vSync(vSync), .DrawArea(DrawArea), .animate(animate));
-	
+
 	//genarate HDMI output
 	CreateHDMIOutputs CHIO1 (.pixclkI(pixclk), .clk_TMDSI(clk_TMDS), .hSyncI(hSync), .vSyncI(vSync), .DrawAreaI(DrawArea), .redI(red), .greenI(green), .blueI(blue), .TMDSpO(TMDSp), .TMDSnO(TMDSn), .TMDSp_clockO(TMDSp_clock), .TMDSn_clockO(TMDSn_clock));
-	 	
+
 ///////////////////////////////////////////////////////////////////////////////
 	//display segment
-	reg [1:0] pix;
 	reg [3:0] pixRd;
-	
+	reg [1:0] pixOf;
 	//set color
 	always @(posedge pixclk)
 	begin
-	
+
+
+			//old methood
 		 if((x>507&&x<527)&&(y>315&&y<386))//bar 1
 			begin
 				pixRd <= 3;
@@ -42,7 +43,7 @@ module HDMI_test(input clk, output [2:0] TMDSp, TMDSn, output TMDSp_clock, TMDSn
 			begin
 				pixRd <=0;
 			end
-		
+
 		//which color to assigh (works)
 		if(DrawArea)
 		begin
@@ -60,8 +61,8 @@ module HDMI_test(input clk, output [2:0] TMDSp, TMDSn, output TMDSp_clock, TMDSn
 		end
 		else
 		begin
-			 red <= 0; 
-			 green <= 0; 
+			 red <= 0;
+			 green <= 0;
 			 blue<= 0;
 		end
 	end
