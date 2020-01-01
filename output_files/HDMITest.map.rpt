@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HDMITest
-Sun Dec 29 22:42:55 2019
+Wed Jan 01 11:09:02 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,21 +14,22 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. State Machine - |HDMI_test|pixRd
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
- 12. General Register Statistics
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
  13. Parameter Settings for User Entity Instance: pixelClk:pxlc|altpll:altpll_component
  14. Parameter Settings for User Entity Instance: sdramPll:sdrc|altpll:altpll_component
- 15. altpll Parameter Settings by Entity Instance
- 16. Port Connectivity Checks: "CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G"
- 17. Port Connectivity Checks: "CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R"
- 18. Port Connectivity Checks: "HvSync:HVS1"
- 19. Port Connectivity Checks: "sdramPll:sdrc"
- 20. Post-Synthesis Netlist Statistics for Top Partition
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+ 15. Parameter Settings for User Entity Instance: rectangle:R1
+ 16. altpll Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "rectangle:R1"
+ 18. Port Connectivity Checks: "CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G"
+ 19. Port Connectivity Checks: "CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R"
+ 20. Port Connectivity Checks: "sdramPll:sdrc"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -54,15 +55,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Dec 29 22:42:55 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 01 11:09:02 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; HDMITest                                    ;
 ; Top-level Entity Name              ; HDMI_test                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 152                                         ;
-;     Total combinational functions  ; 143                                         ;
-;     Dedicated logic registers      ; 92                                          ;
-; Total registers                    ; 92                                          ;
+; Total logic elements               ; 262                                         ;
+;     Total combinational functions  ; 262                                         ;
+;     Dedicated logic registers      ; 125                                         ;
+; Total registers                    ; 125                                         ;
 ; Total pins                         ; 21                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -180,20 +181,21 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                             ; Library ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; TMDS_encoder.v                   ; yes             ; User Verilog HDL File        ; C:/Users/wezerds/Documents/Quartus/HDMITest/TMDS_encoder.v               ;         ;
-; HVSync.v                         ; yes             ; User Verilog HDL File        ; C:/Users/wezerds/Documents/Quartus/HDMITest/HVSync.v                     ;         ;
-; HDMI_test.v                      ; yes             ; User Verilog HDL File        ; C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v                  ;         ;
-; pixelClk.v                       ; yes             ; User Wizard-Generated File   ; C:/Users/wezerds/Documents/Quartus/HDMITest/pixelClk.v                   ;         ;
-; altiobuf.v                       ; yes             ; User Wizard-Generated File   ; C:/Users/wezerds/Documents/Quartus/HDMITest/altiobuf.v                   ;         ;
-; CreateHDMIOutputs.v              ; yes             ; User Verilog HDL File        ; C:/Users/wezerds/Documents/Quartus/HDMITest/CreateHDMIOutputs.v          ;         ;
-; sdramPll.v                       ; yes             ; User Wizard-Generated File   ; C:/Users/wezerds/Documents/Quartus/HDMITest/sdramPll.v                   ;         ;
+; rectangle.v                      ; yes             ; User Verilog HDL File        ; C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v                   ;         ;
+; TMDS_encoder.v                   ; yes             ; User Verilog HDL File        ; C:/Users/wezerds/Documents/GitHub/HDMITest/TMDS_encoder.v                ;         ;
+; HVSync.v                         ; yes             ; User Verilog HDL File        ; C:/Users/wezerds/Documents/GitHub/HDMITest/HVSync.v                      ;         ;
+; HDMI_test.v                      ; yes             ; User Verilog HDL File        ; C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v                   ;         ;
+; pixelClk.v                       ; yes             ; User Wizard-Generated File   ; C:/Users/wezerds/Documents/GitHub/HDMITest/pixelClk.v                    ;         ;
+; altiobuf.v                       ; yes             ; User Wizard-Generated File   ; C:/Users/wezerds/Documents/GitHub/HDMITest/altiobuf.v                    ;         ;
+; CreateHDMIOutputs.v              ; yes             ; User Verilog HDL File        ; C:/Users/wezerds/Documents/GitHub/HDMITest/CreateHDMIOutputs.v           ;         ;
+; sdramPll.v                       ; yes             ; User Wizard-Generated File   ; C:/Users/wezerds/Documents/GitHub/HDMITest/sdramPll.v                    ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                 ; s:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf        ;         ;
 ; aglobal181.inc                   ; yes             ; Megafunction                 ; s:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc    ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                 ; s:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
 ; stratixii_pll.inc                ; yes             ; Megafunction                 ; s:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
 ; cycloneii_pll.inc                ; yes             ; Megafunction                 ; s:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
-; db/pixelclk_altpll.v             ; yes             ; Auto-Generated Megafunction  ; C:/Users/wezerds/Documents/Quartus/HDMITest/db/pixelclk_altpll.v         ;         ;
-; db/sdrampll_altpll.v             ; yes             ; Auto-Generated Megafunction  ; C:/Users/wezerds/Documents/Quartus/HDMITest/db/sdrampll_altpll.v         ;         ;
+; db/pixelclk_altpll.v             ; yes             ; Auto-Generated Megafunction  ; C:/Users/wezerds/Documents/GitHub/HDMITest/db/pixelclk_altpll.v          ;         ;
+; db/sdrampll_altpll.v             ; yes             ; Auto-Generated Megafunction  ; C:/Users/wezerds/Documents/GitHub/HDMITest/db/sdrampll_altpll.v          ;         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
 
 
@@ -202,20 +204,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                 ;
 +---------------------------------------------+---------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 152                                                                                   ;
+; Estimated Total logic elements              ; 262                                                                                   ;
 ;                                             ;                                                                                       ;
-; Total combinational functions               ; 143                                                                                   ;
+; Total combinational functions               ; 262                                                                                   ;
 ; Logic element usage by number of LUT inputs ;                                                                                       ;
-;     -- 4 input functions                    ; 30                                                                                    ;
-;     -- 3 input functions                    ; 47                                                                                    ;
-;     -- <=2 input functions                  ; 66                                                                                    ;
+;     -- 4 input functions                    ; 34                                                                                    ;
+;     -- 3 input functions                    ; 124                                                                                   ;
+;     -- <=2 input functions                  ; 104                                                                                   ;
 ;                                             ;                                                                                       ;
 ; Logic elements by mode                      ;                                                                                       ;
-;     -- normal mode                          ; 103                                                                                   ;
-;     -- arithmetic mode                      ; 40                                                                                    ;
+;     -- normal mode                          ; 130                                                                                   ;
+;     -- arithmetic mode                      ; 132                                                                                   ;
 ;                                             ;                                                                                       ;
-; Total registers                             ; 92                                                                                    ;
-;     -- Dedicated logic registers            ; 92                                                                                    ;
+; Total registers                             ; 125                                                                                   ;
+;     -- Dedicated logic registers            ; 125                                                                                   ;
 ;     -- I/O registers                        ; 0                                                                                     ;
 ;                                             ;                                                                                       ;
 ; I/O pins                                    ; 21                                                                                    ;
@@ -226,9 +228,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                                     ;
 ;                                             ;                                                                                       ;
 ; Maximum fan-out node                        ; pixelClk:pxlc|altpll:altpll_component|pixelClk_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 94                                                                                    ;
-; Total fan-out                               ; 628                                                                                   ;
-; Average fan-out                             ; 2.29                                                                                  ;
+; Maximum fan-out                             ; 92                                                                                    ;
+; Total fan-out                               ; 1014                                                                                  ;
+; Average fan-out                             ; 2.38                                                                                  ;
 +---------------------------------------------+---------------------------------------------------------------------------------------+
 
 
@@ -237,11 +239,11 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                ; Entity Name            ; Library Name ;
 +--------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |HDMI_test                                                         ; 143 (20)            ; 92 (2)                    ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |HDMI_test                                                                                                         ; HDMI_test              ; work         ;
-;    |CreateHDMIOutputs:CHIO1|                                       ; 75 (35)             ; 63 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1                                                                                 ; CreateHDMIOutputs      ; work         ;
-;       |TMDS_encoder:encode_B|                                      ; 14 (14)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B                                                           ; TMDS_encoder           ; work         ;
-;       |TMDS_encoder:encode_G|                                      ; 13 (13)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G                                                           ; TMDS_encoder           ; work         ;
-;       |TMDS_encoder:encode_R|                                      ; 13 (13)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R                                                           ; TMDS_encoder           ; work         ;
+; |HDMI_test                                                         ; 262 (50)            ; 125 (1)                   ; 0           ; 0            ; 0       ; 0         ; 21   ; 0            ; |HDMI_test                                                                                                         ; HDMI_test              ; work         ;
+;    |CreateHDMIOutputs:CHIO1|                                       ; 69 (35)             ; 61 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1                                                                                 ; CreateHDMIOutputs      ; work         ;
+;       |TMDS_encoder:encode_B|                                      ; 11 (11)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B                                                           ; TMDS_encoder           ; work         ;
+;       |TMDS_encoder:encode_G|                                      ; 11 (11)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G                                                           ; TMDS_encoder           ; work         ;
+;       |TMDS_encoder:encode_R|                                      ; 12 (12)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R                                                           ; TMDS_encoder           ; work         ;
 ;       |altiobuf:altobuf_blueI|                                     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1|altiobuf:altobuf_blueI                                                          ; altiobuf               ; work         ;
 ;          |altiobuf_iobuf_out_cst:altiobuf_iobuf_out_cst_component| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1|altiobuf:altobuf_blueI|altiobuf_iobuf_out_cst:altiobuf_iobuf_out_cst_component  ; altiobuf_iobuf_out_cst ; work         ;
 ;       |altiobuf:altobuf_clock|                                     ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1|altiobuf:altobuf_clock                                                          ; altiobuf               ; work         ;
@@ -250,10 +252,11 @@ refer to the applicable agreement for further details.
 ;          |altiobuf_iobuf_out_cst:altiobuf_iobuf_out_cst_component| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1|altiobuf:altobuf_greenI|altiobuf_iobuf_out_cst:altiobuf_iobuf_out_cst_component ; altiobuf_iobuf_out_cst ; work         ;
 ;       |altiobuf:altobuf_redI|                                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1|altiobuf:altobuf_redI                                                           ; altiobuf               ; work         ;
 ;          |altiobuf_iobuf_out_cst:altiobuf_iobuf_out_cst_component| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|CreateHDMIOutputs:CHIO1|altiobuf:altobuf_redI|altiobuf_iobuf_out_cst:altiobuf_iobuf_out_cst_component   ; altiobuf_iobuf_out_cst ; work         ;
-;    |HvSync:HVS1|                                                   ; 48 (48)             ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|HvSync:HVS1                                                                                             ; HvSync                 ; work         ;
+;    |HvSync:HVS1|                                                   ; 53 (53)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|HvSync:HVS1                                                                                             ; HvSync                 ; work         ;
 ;    |pixelClk:pxlc|                                                 ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|pixelClk:pxlc                                                                                           ; pixelClk               ; work         ;
 ;       |altpll:altpll_component|                                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|pixelClk:pxlc|altpll:altpll_component                                                                   ; altpll                 ; work         ;
 ;          |pixelClk_altpll:auto_generated|                          ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|pixelClk:pxlc|altpll:altpll_component|pixelClk_altpll:auto_generated                                    ; pixelClk_altpll        ; work         ;
+;    |rectangle:R1|                                                  ; 90 (90)             ; 35 (35)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |HDMI_test|rectangle:R1                                                                                            ; rectangle              ; work         ;
 +--------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -272,67 +275,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------------------------------------+-----------------+
 
 
-Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------+
-; State Machine - |HDMI_test|pixRd                                                                                   ;
-+------------+------------+------------+------------+------------+------------+------------+------------+------------+
-; Name       ; pixRd.0111 ; pixRd.0110 ; pixRd.0101 ; pixRd.0100 ; pixRd.0011 ; pixRd.0010 ; pixRd.0001 ; pixRd.0000 ;
-+------------+------------+------------+------------+------------+------------+------------+------------+------------+
-; pixRd.0000 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ;
-; pixRd.0001 ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 1          ;
-; pixRd.0010 ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 1          ;
-; pixRd.0011 ; 0          ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 1          ;
-; pixRd.0100 ; 0          ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 1          ;
-; pixRd.0101 ; 0          ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 1          ;
-; pixRd.0110 ; 0          ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
-; pixRd.0111 ; 1          ; 0          ; 0          ; 0          ; 0          ; 0          ; 0          ; 1          ;
-+------------+------------+------------+------------+------------+------------+------------+------------+------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                          ;
-+---------------------------------------------------------+-------------------------------------------------------------------+
-; Register name                                           ; Reason for Removal                                                ;
-+---------------------------------------------------------+-------------------------------------------------------------------+
-; green[3]                                                ; Merged with red[2]                                                ;
-; green[2]                                                ; Merged with green[6]                                              ;
-; blue[7]                                                 ; Merged with green[6]                                              ;
-; red[4]                                                  ; Stuck at GND due to stuck port data_in                            ;
-; green[1,6]                                              ; Stuck at GND due to stuck port data_in                            ;
-; blue[2,3,5]                                             ; Stuck at GND due to stuck port data_in                            ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[3]   ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[1] ;
-; blue[6]                                                 ; Merged with blue[0]                                               ;
-; green[7]                                                ; Merged with blue[0]                                               ;
-; green[4,5]                                              ; Merged with blue[1]                                               ;
-; red[3,5,7]                                              ; Merged with blue[1]                                               ;
-; red[0..2,6]                                             ; Merged with blue[4]                                               ;
-; green[0]                                                ; Merged with blue[4]                                               ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[5]   ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[3] ;
-; pixRd.0001                                              ; Lost fanout                                                       ;
-; pixRd.0010                                              ; Lost fanout                                                       ;
-; pixRd.0100                                              ; Lost fanout                                                       ;
-; pixRd.0101                                              ; Lost fanout                                                       ;
-; pixRd.0110                                              ; Lost fanout                                                       ;
-; pixRd.0111                                              ; Lost fanout                                                       ;
-; pixRd~2                                                 ; Lost fanout                                                       ;
-; pixRd~3                                                 ; Lost fanout                                                       ;
-; pixRd~4                                                 ; Lost fanout                                                       ;
-; pixRd~5                                                 ; Lost fanout                                                       ;
-; pixRd.0000                                              ; Merged with pixRd.0011                                            ;
-; blue[4]                                                 ; Stuck at GND due to stuck port data_in                            ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[8]   ; Stuck at VCC due to stuck port data_in                            ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[8]   ; Stuck at VCC due to stuck port data_in                            ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[1,3] ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[0] ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[1,5] ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[0] ;
-; blue[1]                                                 ; Merged with blue[0]                                               ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[4]   ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[2] ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[6]   ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[2] ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[6]   ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[2] ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[7]   ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[3] ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[7]   ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[0] ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[5]   ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[1] ;
-; Total Number of Removed Registers = 48                  ;                                                                   ;
-+---------------------------------------------------------+-------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                              ;
++-------------------------------------------------------------+-------------------------------------------------------------------+
+; Register name                                               ; Reason for Removal                                                ;
++-------------------------------------------------------------+-------------------------------------------------------------------+
+; blue[0,6,7]                                                 ; Stuck at GND due to stuck port data_in                            ;
+; green[0..4,6,7]                                             ; Stuck at GND due to stuck port data_in                            ;
+; red[2,5]                                                    ; Stuck at GND due to stuck port data_in                            ;
+; blue[2..5]                                                  ; Merged with blue[1]                                               ;
+; green[5]                                                    ; Merged with blue[1]                                               ;
+; red[0,1,3,4,6,7]                                            ; Merged with blue[1]                                               ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[3]       ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[1] ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[4,9]     ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[2] ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[8]       ; Stuck at VCC due to stuck port data_in                            ;
+; rectangle:R1|y[0]                                           ; Merged with rectangle:R1|x[0]                                     ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[9]       ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[2] ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[1,3,5,7] ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[0] ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[1]       ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[0] ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[1,5,7]   ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[0] ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[4]       ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[2] ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[4]       ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[2] ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[7]       ; Merged with CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[5] ;
+; Total Number of Removed Registers = 40                      ;                                                                   ;
++-------------------------------------------------------------+-------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -340,7 +306,7 @@ Encoding Type:  One-Hot
 +---------------+---------------------------+-------------------------------------------------------+
 ; Register name ; Reason for Removal        ; Registers Removed due to This Register                ;
 +---------------+---------------------------+-------------------------------------------------------+
-; green[1]      ; Stuck at GND              ; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[8] ;
+; green[2]      ; Stuck at GND              ; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[8] ;
 ;               ; due to stuck port data_in ;                                                       ;
 +---------------+---------------------------+-------------------------------------------------------+
 
@@ -350,14 +316,31 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 92    ;
-; Number of registers using Synchronous Clear  ; 16    ;
-; Number of registers using Synchronous Load   ; 8     ;
+; Total registers                              ; 125   ;
+; Number of registers using Synchronous Clear  ; 22    ;
+; Number of registers using Synchronous Load   ; 3     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 12    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; rectangle:R1|x[8]                      ; 5       ;
+; rectangle:R1|x[6]                      ; 6       ;
+; rectangle:R1|y[7]                      ; 4       ;
+; rectangle:R1|y[6]                      ; 5       ;
+; rectangle:R1|y[5]                      ; 6       ;
+; rectangle:R1|y[4]                      ; 7       ;
+; rectangle:R1|x_dir                     ; 12      ;
+; rectangle:R1|y_dir                     ; 15      ;
+; Total number of inverted registers = 8 ;         ;
++----------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------+
@@ -1108,6 +1091,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: rectangle:R1 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; H_HIGHT        ; 160   ; Signed Integer                   ;
+; H_WIDTH        ; 160   ; Signed Integer                   ;
+; IX             ; 320   ; Signed Integer                   ;
+; IY             ; 240   ; Signed Integer                   ;
+; IX_DIR         ; 1     ; Signed Integer                   ;
+; IY_DIR         ; 1     ; Signed Integer                   ;
+; D_WIDTH        ; 640   ; Signed Integer                   ;
+; D_HEIGHT       ; 480   ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                          ;
 +-------------------------------+---------------------------------------+
@@ -1133,6 +1133,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+---------------------------------------+
 
 
++---------------------------------------------+
+; Port Connectivity Checks: "rectangle:R1"    ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; goAnimate ; Input ; Info     ; Stuck at VCC ;
++-----------+-------+----------+--------------+
+
+
 +---------------------------------------------------------------------------+
 ; Port Connectivity Checks: "CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G" ;
 +------+-------+----------+-------------------------------------------------+
@@ -1151,15 +1160,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "HvSync:HVS1"                                                                           ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; animate ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "sdramPll:sdrc"                                                                      ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -1175,26 +1175,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 21                          ;
-; cycloneiii_ff         ; 92                          ;
+; cycloneiii_ff         ; 125                         ;
 ;     ENA               ; 12                          ;
-;     SCLR              ; 16                          ;
-;     SLD               ; 8                           ;
-;     plain             ; 56                          ;
+;     SCLR              ; 22                          ;
+;     SLD               ; 3                           ;
+;     plain             ; 88                          ;
 ; cycloneiii_io_obuf    ; 4                           ;
-; cycloneiii_lcell_comb ; 144                         ;
-;     arith             ; 40                          ;
-;         2 data inputs ; 29                          ;
-;         3 data inputs ; 11                          ;
-;     normal            ; 104                         ;
-;         0 data inputs ; 7                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 27                          ;
-;         3 data inputs ; 36                          ;
-;         4 data inputs ; 30                          ;
+; cycloneiii_lcell_comb ; 263                         ;
+;     arith             ; 132                         ;
+;         2 data inputs ; 56                          ;
+;         3 data inputs ; 76                          ;
+;     normal            ; 131                         ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 48                          ;
+;         4 data inputs ; 34                          ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.10                        ;
+; Max LUT depth         ; 4.60                        ;
+; Average LUT depth     ; 2.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1213,36 +1213,46 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Dec 29 22:42:45 2019
+    Info: Processing started: Wed Jan 01 11:08:52 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HDMITest -c HDMITest
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Warning (10261): Verilog HDL Event Control warning at rectangle.v(35): Event Control contains a complex event expression File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file rectangle.v
+    Info (12023): Found entity 1: rectangle File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sdram_controller.v
-    Info (12023): Found entity 1: sdram_controller File: C:/Users/wezerds/Documents/Quartus/HDMITest/sdram_controller.v Line: 25
+    Info (12023): Found entity 1: sdram_controller File: C:/Users/wezerds/Documents/GitHub/HDMITest/sdram_controller.v Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file tmds_encoder.v
-    Info (12023): Found entity 1: TMDS_encoder File: C:/Users/wezerds/Documents/Quartus/HDMITest/TMDS_encoder.v Line: 1
+    Info (12023): Found entity 1: TMDS_encoder File: C:/Users/wezerds/Documents/GitHub/HDMITest/TMDS_encoder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hvsync.v
-    Info (12023): Found entity 1: HvSync File: C:/Users/wezerds/Documents/Quartus/HDMITest/HVSync.v Line: 1
+    Info (12023): Found entity 1: HvSync File: C:/Users/wezerds/Documents/GitHub/HDMITest/HVSync.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hdmi_test.v
-    Info (12023): Found entity 1: HDMI_test File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
+    Info (12023): Found entity 1: HDMI_test File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file pixelclk.v
-    Info (12023): Found entity 1: pixelClk File: C:/Users/wezerds/Documents/Quartus/HDMITest/pixelClk.v Line: 39
+    Info (12023): Found entity 1: pixelClk File: C:/Users/wezerds/Documents/GitHub/HDMITest/pixelClk.v Line: 39
 Info (12021): Found 2 design units, including 2 entities, in source file altiobuf.v
-    Info (12023): Found entity 1: altiobuf_iobuf_out_cst File: C:/Users/wezerds/Documents/Quartus/HDMITest/altiobuf.v Line: 46
-    Info (12023): Found entity 2: altiobuf File: C:/Users/wezerds/Documents/Quartus/HDMITest/altiobuf.v Line: 93
+    Info (12023): Found entity 1: altiobuf_iobuf_out_cst File: C:/Users/wezerds/Documents/GitHub/HDMITest/altiobuf.v Line: 46
+    Info (12023): Found entity 2: altiobuf File: C:/Users/wezerds/Documents/GitHub/HDMITest/altiobuf.v Line: 93
 Info (12021): Found 1 design units, including 1 entities, in source file createhdmioutputs.v
-    Info (12023): Found entity 1: CreateHDMIOutputs File: C:/Users/wezerds/Documents/Quartus/HDMITest/CreateHDMIOutputs.v Line: 1
+    Info (12023): Found entity 1: CreateHDMIOutputs File: C:/Users/wezerds/Documents/GitHub/HDMITest/CreateHDMIOutputs.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sdrampll.v
-    Info (12023): Found entity 1: sdramPll File: C:/Users/wezerds/Documents/Quartus/HDMITest/sdramPll.v Line: 39
+    Info (12023): Found entity 1: sdramPll File: C:/Users/wezerds/Documents/GitHub/HDMITest/sdramPll.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file loadram.v
-    Info (12023): Found entity 1: loadRam File: C:/Users/wezerds/Documents/Quartus/HDMITest/loadRam.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at HDMI_test.v(16): created implicit net for "mem_clk" File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 16
+    Info (12023): Found entity 1: loadRam File: C:/Users/wezerds/Documents/GitHub/HDMITest/loadRam.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at HDMI_test.v(19): created implicit net for "mem_clk" File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 19
 Info (12127): Elaborating entity "HDMI_test" for the top level hierarchy
-Warning (10034): Output port "led" at HDMI_test.v(1) has no driver File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
-Info (12128): Elaborating entity "pixelClk" for hierarchy "pixelClk:pxlc" File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 15
-Info (12128): Elaborating entity "altpll" for hierarchy "pixelClk:pxlc|altpll:altpll_component" File: C:/Users/wezerds/Documents/Quartus/HDMITest/pixelClk.v Line: 94
-Info (12130): Elaborated megafunction instantiation "pixelClk:pxlc|altpll:altpll_component" File: C:/Users/wezerds/Documents/Quartus/HDMITest/pixelClk.v Line: 94
-Info (12133): Instantiated megafunction "pixelClk:pxlc|altpll:altpll_component" with the following parameter: File: C:/Users/wezerds/Documents/Quartus/HDMITest/pixelClk.v Line: 94
+Warning (10230): Verilog HDL assignment warning at HDMI_test.v(35): truncated value with size 32 to match size of target (1) File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 35
+Warning (10199): Verilog HDL Case Statement warning at HDMI_test.v(60): case item expression never matches the case expression File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 60
+Warning (10199): Verilog HDL Case Statement warning at HDMI_test.v(61): case item expression never matches the case expression File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 61
+Warning (10199): Verilog HDL Case Statement warning at HDMI_test.v(62): case item expression never matches the case expression File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 62
+Warning (10199): Verilog HDL Case Statement warning at HDMI_test.v(63): case item expression never matches the case expression File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 63
+Warning (10199): Verilog HDL Case Statement warning at HDMI_test.v(64): case item expression never matches the case expression File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 64
+Warning (10199): Verilog HDL Case Statement warning at HDMI_test.v(65): case item expression never matches the case expression File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 65
+Warning (10034): Output port "led" at HDMI_test.v(1) has no driver File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
+Info (12128): Elaborating entity "pixelClk" for hierarchy "pixelClk:pxlc" File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 18
+Info (12128): Elaborating entity "altpll" for hierarchy "pixelClk:pxlc|altpll:altpll_component" File: C:/Users/wezerds/Documents/GitHub/HDMITest/pixelClk.v Line: 94
+Info (12130): Elaborated megafunction instantiation "pixelClk:pxlc|altpll:altpll_component" File: C:/Users/wezerds/Documents/GitHub/HDMITest/pixelClk.v Line: 94
+Info (12133): Instantiated megafunction "pixelClk:pxlc|altpll:altpll_component" with the following parameter: File: C:/Users/wezerds/Documents/GitHub/HDMITest/pixelClk.v Line: 94
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "2000"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1302,12 +1312,12 @@ Info (12133): Instantiated megafunction "pixelClk:pxlc|altpll:altpll_component" 
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/pixelclk_altpll.v
-    Info (12023): Found entity 1: pixelClk_altpll File: C:/Users/wezerds/Documents/Quartus/HDMITest/db/pixelclk_altpll.v Line: 29
+    Info (12023): Found entity 1: pixelClk_altpll File: C:/Users/wezerds/Documents/GitHub/HDMITest/db/pixelclk_altpll.v Line: 29
 Info (12128): Elaborating entity "pixelClk_altpll" for hierarchy "pixelClk:pxlc|altpll:altpll_component|pixelClk_altpll:auto_generated" File: s:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "sdramPll" for hierarchy "sdramPll:sdrc" File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 16
-Info (12128): Elaborating entity "altpll" for hierarchy "sdramPll:sdrc|altpll:altpll_component" File: C:/Users/wezerds/Documents/Quartus/HDMITest/sdramPll.v Line: 90
-Info (12130): Elaborated megafunction instantiation "sdramPll:sdrc|altpll:altpll_component" File: C:/Users/wezerds/Documents/Quartus/HDMITest/sdramPll.v Line: 90
-Info (12133): Instantiated megafunction "sdramPll:sdrc|altpll:altpll_component" with the following parameter: File: C:/Users/wezerds/Documents/Quartus/HDMITest/sdramPll.v Line: 90
+Info (12128): Elaborating entity "sdramPll" for hierarchy "sdramPll:sdrc" File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 19
+Info (12128): Elaborating entity "altpll" for hierarchy "sdramPll:sdrc|altpll:altpll_component" File: C:/Users/wezerds/Documents/GitHub/HDMITest/sdramPll.v Line: 90
+Info (12130): Elaborated megafunction instantiation "sdramPll:sdrc|altpll:altpll_component" File: C:/Users/wezerds/Documents/GitHub/HDMITest/sdramPll.v Line: 90
+Info (12133): Instantiated megafunction "sdramPll:sdrc|altpll:altpll_component" with the following parameter: File: C:/Users/wezerds/Documents/GitHub/HDMITest/sdramPll.v Line: 90
     Info (12134): Parameter "bandwidth_type" = "AUTO"
     Info (12134): Parameter "clk0_divide_by" = "1"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
@@ -1363,52 +1373,63 @@ Info (12133): Instantiated megafunction "sdramPll:sdrc|altpll:altpll_component" 
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "width_clock" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/sdrampll_altpll.v
-    Info (12023): Found entity 1: sdramPll_altpll File: C:/Users/wezerds/Documents/Quartus/HDMITest/db/sdrampll_altpll.v Line: 29
+    Info (12023): Found entity 1: sdramPll_altpll File: C:/Users/wezerds/Documents/GitHub/HDMITest/db/sdrampll_altpll.v Line: 29
 Info (12128): Elaborating entity "sdramPll_altpll" for hierarchy "sdramPll:sdrc|altpll:altpll_component|sdramPll_altpll:auto_generated" File: s:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "HvSync" for hierarchy "HvSync:HVS1" File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 19
-Warning (10230): Verilog HDL assignment warning at HVSync.v(8): truncated value with size 32 to match size of target (12) File: C:/Users/wezerds/Documents/Quartus/HDMITest/HVSync.v Line: 8
-Warning (10230): Verilog HDL assignment warning at HVSync.v(9): truncated value with size 32 to match size of target (12) File: C:/Users/wezerds/Documents/Quartus/HDMITest/HVSync.v Line: 9
-Info (12128): Elaborating entity "CreateHDMIOutputs" for hierarchy "CreateHDMIOutputs:CHIO1" File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 22
-Info (12128): Elaborating entity "TMDS_encoder" for hierarchy "CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R" File: C:/Users/wezerds/Documents/Quartus/HDMITest/CreateHDMIOutputs.v Line: 5
-Info (12128): Elaborating entity "altiobuf" for hierarchy "CreateHDMIOutputs:CHIO1|altiobuf:altobuf_redI" File: C:/Users/wezerds/Documents/Quartus/HDMITest/CreateHDMIOutputs.v Line: 23
-Info (12128): Elaborating entity "altiobuf_iobuf_out_cst" for hierarchy "CreateHDMIOutputs:CHIO1|altiobuf:altobuf_redI|altiobuf_iobuf_out_cst:altiobuf_iobuf_out_cst_component" File: C:/Users/wezerds/Documents/Quartus/HDMITest/altiobuf.v Line: 110
+Info (12128): Elaborating entity "HvSync" for hierarchy "HvSync:HVS1" File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 22
+Warning (10230): Verilog HDL assignment warning at HVSync.v(8): truncated value with size 32 to match size of target (12) File: C:/Users/wezerds/Documents/GitHub/HDMITest/HVSync.v Line: 8
+Warning (10230): Verilog HDL assignment warning at HVSync.v(9): truncated value with size 32 to match size of target (12) File: C:/Users/wezerds/Documents/GitHub/HDMITest/HVSync.v Line: 9
+Info (12128): Elaborating entity "CreateHDMIOutputs" for hierarchy "CreateHDMIOutputs:CHIO1" File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 25
+Info (12128): Elaborating entity "TMDS_encoder" for hierarchy "CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R" File: C:/Users/wezerds/Documents/GitHub/HDMITest/CreateHDMIOutputs.v Line: 5
+Info (12128): Elaborating entity "altiobuf" for hierarchy "CreateHDMIOutputs:CHIO1|altiobuf:altobuf_redI" File: C:/Users/wezerds/Documents/GitHub/HDMITest/CreateHDMIOutputs.v Line: 23
+Info (12128): Elaborating entity "altiobuf_iobuf_out_cst" for hierarchy "CreateHDMIOutputs:CHIO1|altiobuf:altobuf_redI|altiobuf_iobuf_out_cst:altiobuf_iobuf_out_cst_component" File: C:/Users/wezerds/Documents/GitHub/HDMITest/altiobuf.v Line: 110
+Info (12128): Elaborating entity "rectangle" for hierarchy "rectangle:R1" File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 27
+Warning (10230): Verilog HDL assignment warning at rectangle.v(24): truncated value with size 32 to match size of target (12) File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 24
+Warning (10230): Verilog HDL assignment warning at rectangle.v(25): truncated value with size 32 to match size of target (12) File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 25
+Warning (10230): Verilog HDL assignment warning at rectangle.v(26): truncated value with size 32 to match size of target (1) File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 26
+Warning (10230): Verilog HDL assignment warning at rectangle.v(27): truncated value with size 32 to match size of target (1) File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 27
+Warning (10230): Verilog HDL assignment warning at rectangle.v(30): truncated value with size 32 to match size of target (12) File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 30
+Warning (10230): Verilog HDL assignment warning at rectangle.v(31): truncated value with size 32 to match size of target (12) File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 31
+Warning (10230): Verilog HDL assignment warning at rectangle.v(32): truncated value with size 32 to match size of target (12) File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 32
+Warning (10230): Verilog HDL assignment warning at rectangle.v(33): truncated value with size 32 to match size of target (12) File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 33
+Warning (10230): Verilog HDL assignment warning at rectangle.v(43): truncated value with size 32 to match size of target (9) File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 43
+Warning (10230): Verilog HDL assignment warning at rectangle.v(45): truncated value with size 32 to match size of target (12) File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 45
+Warning (10230): Verilog HDL assignment warning at rectangle.v(46): truncated value with size 32 to match size of target (12) File: C:/Users/wezerds/Documents/GitHub/HDMITest/rectangle.v Line: 46
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following PLL node(s):
-        Warning (14320): Synthesized away node "sdramPll:sdrc|altpll:altpll_component|sdramPll_altpll:auto_generated|wire_pll1_clk[0]" File: C:/Users/wezerds/Documents/Quartus/HDMITest/db/sdrampll_altpll.v Line: 77
+        Warning (14320): Synthesized away node "sdramPll:sdrc|altpll:altpll_component|sdramPll_altpll:auto_generated|wire_pll1_clk[0]" File: C:/Users/wezerds/Documents/GitHub/HDMITest/db/sdrampll_altpll.v Line: 77
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led[0]" is stuck at GND File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
-    Warning (13410): Pin "led[1]" is stuck at GND File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
-    Warning (13410): Pin "led[2]" is stuck at GND File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
-    Warning (13410): Pin "led[3]" is stuck at GND File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
-    Warning (13410): Pin "led[4]" is stuck at GND File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
-    Warning (13410): Pin "led[5]" is stuck at GND File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
-    Warning (13410): Pin "led[6]" is stuck at GND File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
-    Warning (13410): Pin "led[7]" is stuck at GND File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
+    Warning (13410): Pin "led[0]" is stuck at GND File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
+    Warning (13410): Pin "led[1]" is stuck at GND File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
+    Warning (13410): Pin "led[2]" is stuck at GND File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
+    Warning (13410): Pin "led[3]" is stuck at GND File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
+    Warning (13410): Pin "led[4]" is stuck at GND File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
+    Warning (13410): Pin "led[5]" is stuck at GND File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
+    Warning (13410): Pin "led[6]" is stuck at GND File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
+    Warning (13410): Pin "led[7]" is stuck at GND File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 10 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/wezerds/Documents/Quartus/HDMITest/output_files/HDMITest.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/wezerds/Documents/GitHub/HDMITest/output_files/HDMITest.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "dip[0]" File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
-    Warning (15610): No output dependent on input pin "dip[1]" File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
-    Warning (15610): No output dependent on input pin "dip[2]" File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
-    Warning (15610): No output dependent on input pin "dip[3]" File: C:/Users/wezerds/Documents/Quartus/HDMITest/HDMI_test.v Line: 1
-Info (21057): Implemented 177 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "dip[0]" File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
+    Warning (15610): No output dependent on input pin "dip[1]" File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
+    Warning (15610): No output dependent on input pin "dip[2]" File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
+    Warning (15610): No output dependent on input pin "dip[3]" File: C:/Users/wezerds/Documents/GitHub/HDMITest/HDMI_test.v Line: 1
+Info (21057): Implemented 285 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 155 logic cells
+    Info (21061): Implemented 263 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4820 megabytes
-    Info: Processing ended: Sun Dec 29 22:42:55 2019
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 4819 megabytes
+    Info: Processing ended: Wed Jan 01 11:09:02 2020
     Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/wezerds/Documents/Quartus/HDMITest/output_files/HDMITest.map.smsg.
+The suppressed messages can be found in C:/Users/wezerds/Documents/GitHub/HDMITest/output_files/HDMITest.map.smsg.
 
 

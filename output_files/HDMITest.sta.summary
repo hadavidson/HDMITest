@@ -2,12 +2,20 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'pxlc|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -6.238
+TNS   : -6.238
+
+Type  : Slow 1200mV 85C Model Setup 'HvSync:HVS1|animate'
+Slack : -2.048
+TNS   : -44.991
+
 Type  : Slow 1200mV 85C Model Setup 'pxlc|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 1.633
+Slack : 1.926
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Setup 'pxlc|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 35.386
+Type  : Slow 1200mV 85C Model Hold 'HvSync:HVS1|animate'
+Slack : 0.356
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'pxlc|altpll_component|auto_generated|pll1|clk[1]'
@@ -15,8 +23,12 @@ Slack : 0.358
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'pxlc|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.389
+Slack : 0.410
 TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'HvSync:HVS1|animate'
+Slack : -1.000
+TNS   : -35.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pxlc|altpll_component|auto_generated|pll1|clk[1]'
 Slack : 1.732
@@ -30,12 +42,20 @@ Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pxlc|altpll_component|auto_ge
 Slack : 19.605
 TNS   : 0.000
 
+Type  : Slow 1200mV 0C Model Setup 'pxlc|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -5.519
+TNS   : -5.519
+
+Type  : Slow 1200mV 0C Model Setup 'HvSync:HVS1|animate'
+Slack : -1.745
+TNS   : -36.594
+
 Type  : Slow 1200mV 0C Model Setup 'pxlc|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 1.908
+Slack : 2.139
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'pxlc|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 35.877
+Type  : Slow 1200mV 0C Model Hold 'HvSync:HVS1|animate'
+Slack : 0.311
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'pxlc|altpll_component|auto_generated|pll1|clk[1]'
@@ -43,8 +63,12 @@ Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'pxlc|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.347
+Slack : 0.367
 TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'HvSync:HVS1|animate'
+Slack : -1.000
+TNS   : -35.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pxlc|altpll_component|auto_generated|pll1|clk[1]'
 Slack : 1.729
@@ -58,12 +82,20 @@ Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pxlc|altpll_component|auto_gen
 Slack : 19.601
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Setup 'pxlc|altpll_component|auto_generated|pll1|clk[0]'
+Slack : -3.613
+TNS   : -3.613
+
+Type  : Fast 1200mV 0C Model Setup 'HvSync:HVS1|animate'
+Slack : -0.724
+TNS   : -10.423
+
 Type  : Fast 1200mV 0C Model Setup 'pxlc|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 2.560
+Slack : 2.752
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'pxlc|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 37.222
+Type  : Fast 1200mV 0C Model Hold 'HvSync:HVS1|animate'
+Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'pxlc|altpll_component|auto_generated|pll1|clk[1]'
@@ -71,11 +103,15 @@ Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'pxlc|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.204
+Slack : 0.215
 TNS   : 0.000
 
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'HvSync:HVS1|animate'
+Slack : -1.000
+TNS   : -35.000
+
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pxlc|altpll_component|auto_generated|pll1|clk[1]'
-Slack : 1.766
+Slack : 1.767
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -83,7 +119,7 @@ Slack : 9.587
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pxlc|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 19.639
+Slack : 19.640
 TNS   : 0.000
 
 ------------------------------------------------------------

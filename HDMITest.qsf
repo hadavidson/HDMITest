@@ -116,6 +116,7 @@ set_location_assignment PIN_N3 -to mem_dq[14]
 set_location_assignment PIN_K1 -to mem_dq[15]
 set_location_assignment PIN_L2 -to mem_ras_n
 set_location_assignment PIN_C2 -to mem_we_n
+set_global_assignment -name VERILOG_FILE rectangle.v
 set_global_assignment -name VERILOG_FILE sdram_controller.v
 set_global_assignment -name VERILOG_FILE TMDS_encoder.v
 set_global_assignment -name VERILOG_FILE HVSync.v

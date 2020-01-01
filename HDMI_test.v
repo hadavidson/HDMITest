@@ -7,6 +7,9 @@ module HDMI_test(input clk, output [2:0] TMDSp, TMDSn, output TMDSp_clock, TMDSn
 	reg [7:0] red, green, blue;
 	wire [11:0] x, y;
 	wire pixclk, clk_TMDS, hSync, vSync, DrawArea, animate;
+	wire [11:0] o_x1, o_x2, o_y1, o_y2;
+	wire display;
+	reg goAnimate=1;
 
 ///////////////////////////////////////////////////////////////////////////////
 	//call modules
@@ -21,29 +24,33 @@ module HDMI_test(input clk, output [2:0] TMDSp, TMDSn, output TMDSp_clock, TMDSn
 	//genarate HDMI output
 	CreateHDMIOutputs CHIO1 (.pixclkI(pixclk), .clk_TMDSI(clk_TMDS), .hSyncI(hSync), .vSyncI(vSync), .DrawAreaI(DrawArea), .redI(red), .greenI(green), .blueI(blue), .TMDSpO(TMDSp), .TMDSnO(TMDSn), .TMDSp_clockO(TMDSp_clock), .TMDSn_clockO(TMDSn_clock));
 
+	rectangle R1 (.i_animate(animate), .goAnimate(goAnimate), .o_x1(o_x1), .o_x2(o_x2), .o_y1(o_y1), .o_y2(o_y2), .display(display));
+	
 ///////////////////////////////////////////////////////////////////////////////
 	//display segment
-	reg [3:0] pixRd;
+	//reg [3:0] pixRd;
+	wire pixRd;
 	reg [1:0] pixOf;
 	//set color
+	assign pixRd = ((x>o_x1)&(y>o_y1)&(x<o_x2)&(y<o_y2)&display) ? 1 : 0;
+	
 	always @(posedge pixclk)
 	begin
 
 
 			//old methood
-		 if((x>507&&x<527)&&(y>315&&y<386))//bar 1
-			begin
-				pixRd <= 3;
-			end
-		else if((x>493&&x<506)&&(y>313&&y<385))//bar 2
-			begin
-				pixRd <= 3;
-			end
-		else
-			begin
-				pixRd <=0;
-			end
-
+//		 if((x>507&&x<527)&&(y>315&&y<386))//bar 1
+//			begin
+//				pixRd <= 3;
+//			end
+//		else if((x>493&&x<506)&&(y>313&&y<385))//bar 2
+//			begin
+//				pixRd <= 3;
+//			end
+//		else
+//			begin
+//				pixRd <=0;
+//			end
 		//which color to assigh (works)
 		if(DrawArea)
 		begin
@@ -66,5 +73,5 @@ module HDMI_test(input clk, output [2:0] TMDSp, TMDSn, output TMDSp_clock, TMDSn
 			 blue<= 0;
 		end
 	end
-//	assign led = reAddr[22:15];
+	//assign led = ((x>o_x1)&(y>o_y1)&(x<o_x2)&(y<o_y2)) ? 255 : 0;
 endmodule
