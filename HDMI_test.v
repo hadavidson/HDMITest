@@ -24,7 +24,7 @@ module HDMI_test(input clk, output [2:0] TMDSp, TMDSn, output TMDSp_clock, TMDSn
 	speedCluster SPEED1 (.animate(animate), .x(x), .y(y), .pixRd(pixRd));
 	
 	//set color on hdmi out
-	assighColor(.pixclk(pixclk), .DrawArea(DrawArea), .pixRd(pixRd), .red(red), .green(green), .blue(blue));
+	assighColor AC1 (.pixclk(pixclk), .DrawArea(DrawArea), .pixRd(pixRd), .red(red), .green(green), .blue(blue));
 		
 	//assign led = sP7m;//test spot
 endmodule

@@ -1,5 +1,5 @@
 Fitter report for HDMITest
-Wed Jan 01 21:19:34 2020
+Wed Jan 01 22:18:42 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -70,17 +70,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jan 01 21:19:34 2020       ;
+; Fitter Status                      ; Successful - Wed Jan 01 22:18:42 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; HDMITest                                    ;
 ; Top-level Entity Name              ; HDMI_test                                   ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,104 / 22,320 ( 5 % )                      ;
-;     Total combinational functions  ; 1,090 / 22,320 ( 5 % )                      ;
-;     Dedicated logic registers      ; 201 / 22,320 ( < 1 % )                      ;
-; Total registers                    ; 201                                         ;
+; Total logic elements               ; 476 / 22,320 ( 2 % )                        ;
+;     Total combinational functions  ; 471 / 22,320 ( 2 % )                        ;
+;     Dedicated logic registers      ; 135 / 22,320 ( < 1 % )                      ;
+; Total registers                    ; 135                                         ;
 ; Total pins                         ; 21 / 154 ( 14 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
@@ -157,18 +157,13 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 1.10        ;
+; Average used               ; 1.09        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.8%      ;
-;     Processor 3            ;   1.4%      ;
-;     Processor 4            ;   1.4%      ;
-;     Processor 5            ;   1.4%      ;
-;     Processor 6            ;   1.4%      ;
-;     Processor 7            ;   1.4%      ;
-;     Processor 8            ;   1.4%      ;
+;     Processor 2            ;   1.3%      ;
+;     Processors 3-8         ;   1.2%      ;
 +----------------------------+-------------+
 
 
@@ -218,19 +213,19 @@ refer to the applicable agreement for further details.
 +----------+----------------+--------------+--------------+---------------+----------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Incremental Compilation Preservation Summary                                                      ;
-+---------------------+---------------------+----------------------------+--------------------------+
-; Type                ; Total [A + B]       ; From Design Partitions [A] ; From Rapid Recompile [B] ;
-+---------------------+---------------------+----------------------------+--------------------------+
-; Placement (by node) ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 1342 ) ; 0.00 % ( 0 / 1342 )        ; 0.00 % ( 0 / 1342 )      ;
-;     -- Achieved     ; 0.00 % ( 0 / 1342 ) ; 0.00 % ( 0 / 1342 )        ; 0.00 % ( 0 / 1342 )      ;
-;                     ;                     ;                            ;                          ;
-; Routing (by net)    ;                     ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-;     -- Achieved     ; 0.00 % ( 0 / 0 )    ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-+---------------------+---------------------+----------------------------+--------------------------+
++--------------------------------------------------------------------------------------------------+
+; Incremental Compilation Preservation Summary                                                     ;
++---------------------+--------------------+----------------------------+--------------------------+
+; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
++---------------------+--------------------+----------------------------+--------------------------+
+; Placement (by node) ;                    ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 657 ) ; 0.00 % ( 0 / 657 )         ; 0.00 % ( 0 / 657 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 657 ) ; 0.00 % ( 0 / 657 )         ; 0.00 % ( 0 / 657 )       ;
+;                     ;                    ;                            ;                          ;
+; Routing (by net)    ;                    ;                            ;                          ;
+;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
+;     -- Achieved     ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
++---------------------+--------------------+----------------------------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -248,7 +243,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 1331 )   ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 646 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 11 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -264,26 +259,26 @@ The pin-out file can be found in C:/Users/wezerds/Documents/GitHub/HDMITest/outp
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 1,104 / 22,320 ( 5 % ) ;
-;     -- Combinational with no register       ; 903                    ;
-;     -- Register only                        ; 14                     ;
-;     -- Combinational with a register        ; 187                    ;
+; Total logic elements                        ; 476 / 22,320 ( 2 % )   ;
+;     -- Combinational with no register       ; 341                    ;
+;     -- Register only                        ; 5                      ;
+;     -- Combinational with a register        ; 130                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 168                    ;
-;     -- 3 input functions                    ; 469                    ;
-;     -- <=2 input functions                  ; 453                    ;
-;     -- Register only                        ; 14                     ;
+;     -- 4 input functions                    ; 81                     ;
+;     -- 3 input functions                    ; 192                    ;
+;     -- <=2 input functions                  ; 198                    ;
+;     -- Register only                        ; 5                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 422                    ;
-;     -- arithmetic mode                      ; 668                    ;
+;     -- normal mode                          ; 223                    ;
+;     -- arithmetic mode                      ; 248                    ;
 ;                                             ;                        ;
-; Total registers*                            ; 201 / 23,018 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 201 / 22,320 ( < 1 % ) ;
+; Total registers*                            ; 135 / 23,018 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 135 / 22,320 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 698 ( 0 % )        ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 82 / 1,395 ( 6 % )     ;
+; Total LABs:  partially or completely used   ; 38 / 1,395 ( 3 % )     ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 21 / 154 ( 14 % )      ;
 ;     -- Clock pins                           ; 4 / 7 ( 57 % )         ;
@@ -301,12 +296,12 @@ The pin-out file can be found in C:/Users/wezerds/Documents/GitHub/HDMITest/outp
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )          ;
-; Average interconnect usage (total/H/V)      ; 1.0% / 1.0% / 1.1%     ;
-; Peak interconnect usage (total/H/V)         ; 10.9% / 10.4% / 11.6%  ;
-; Maximum fan-out                             ; 93                     ;
-; Highest non-global fan-out                  ; 64                     ;
-; Total fan-out                               ; 3436                   ;
-; Average fan-out                             ; 2.54                   ;
+; Average interconnect usage (total/H/V)      ; 0.4% / 0.3% / 0.5%     ;
+; Peak interconnect usage (total/H/V)         ; 2.8% / 1.7% / 4.3%     ;
+; Maximum fan-out                             ; 76                     ;
+; Highest non-global fan-out                  ; 47                     ;
+; Total fan-out                               ; 1629                   ;
+; Average fan-out                             ; 2.46                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -319,26 +314,26 @@ The pin-out file can be found in C:/Users/wezerds/Documents/GitHub/HDMITest/outp
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 1104 / 22320 ( 5 % )  ; 0 / 22320 ( 0 % )              ;
-;     -- Combinational with no register       ; 903                   ; 0                              ;
-;     -- Register only                        ; 14                    ; 0                              ;
-;     -- Combinational with a register        ; 187                   ; 0                              ;
+; Total logic elements                        ; 476 / 22320 ( 2 % )   ; 0 / 22320 ( 0 % )              ;
+;     -- Combinational with no register       ; 341                   ; 0                              ;
+;     -- Register only                        ; 5                     ; 0                              ;
+;     -- Combinational with a register        ; 130                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 168                   ; 0                              ;
-;     -- 3 input functions                    ; 469                   ; 0                              ;
-;     -- <=2 input functions                  ; 453                   ; 0                              ;
-;     -- Register only                        ; 14                    ; 0                              ;
+;     -- 4 input functions                    ; 81                    ; 0                              ;
+;     -- 3 input functions                    ; 192                   ; 0                              ;
+;     -- <=2 input functions                  ; 198                   ; 0                              ;
+;     -- Register only                        ; 5                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 422                   ; 0                              ;
-;     -- arithmetic mode                      ; 668                   ; 0                              ;
+;     -- normal mode                          ; 223                   ; 0                              ;
+;     -- arithmetic mode                      ; 248                   ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 201                   ; 0                              ;
-;     -- Dedicated logic registers            ; 201 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
+; Total registers                             ; 135                   ; 0                              ;
+;     -- Dedicated logic registers            ; 135 / 22320 ( < 1 % ) ; 0 / 22320 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 82 / 1395 ( 6 % )     ; 0 / 1395 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 38 / 1395 ( 3 % )     ; 0 / 1395 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 21                    ; 0                              ;
@@ -349,18 +344,18 @@ The pin-out file can be found in C:/Users/wezerds/Documents/GitHub/HDMITest/outp
 ; Clock control block                         ; 1 / 24 ( 4 % )        ; 2 / 24 ( 8 % )                 ;
 ;                                             ;                       ;                                ;
 ; Connections                                 ;                       ;                                ;
-;     -- Input Connections                    ; 128                   ; 1                              ;
-;     -- Registered Input Connections         ; 127                   ; 0                              ;
-;     -- Output Connections                   ; 1                     ; 128                            ;
+;     -- Input Connections                    ; 111                   ; 1                              ;
+;     -- Registered Input Connections         ; 110                   ; 0                              ;
+;     -- Output Connections                   ; 1                     ; 111                            ;
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 3429                  ; 136                            ;
-;     -- Registered Connections               ; 1303                  ; 0                              ;
+;     -- Total Connections                    ; 1622                  ; 119                            ;
+;     -- Registered Connections               ; 722                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
-;     -- Top                                  ; 0                     ; 129                            ;
-;     -- hard_block:auto_generated_inst       ; 129                   ; 0                              ;
+;     -- Top                                  ; 0                     ; 112                            ;
+;     -- hard_block:auto_generated_inst       ; 112                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Partition Interface                         ;                       ;                                ;
 ;     -- Input Ports                          ; 5                     ; 1                              ;
@@ -804,11 +799,11 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +--------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node                                         ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                ; Entity Name            ; Library Name ;
 +--------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
-; |HDMI_test                                                         ; 1104 (0)    ; 201 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 21   ; 0            ; 903 (0)      ; 14 (0)            ; 187 (0)          ; |HDMI_test                                                                                                         ; HDMI_test              ; work         ;
-;    |CreateHDMIOutputs:CHIO1|                                       ; 223 (35)    ; 77 (35)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 146 (0)      ; 12 (0)            ; 65 (35)          ; |HDMI_test|CreateHDMIOutputs:CHIO1                                                                                 ; CreateHDMIOutputs      ; work         ;
-;       |TMDS_encoder:encode_B|                                      ; 62 (62)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 48 (48)      ; 6 (6)             ; 8 (8)            ; |HDMI_test|CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B                                                           ; TMDS_encoder           ; work         ;
-;       |TMDS_encoder:encode_G|                                      ; 66 (66)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 52 (52)      ; 3 (3)             ; 11 (11)          ; |HDMI_test|CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G                                                           ; TMDS_encoder           ; work         ;
-;       |TMDS_encoder:encode_R|                                      ; 60 (60)     ; 14 (14)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 46 (46)      ; 3 (3)             ; 11 (11)          ; |HDMI_test|CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R                                                           ; TMDS_encoder           ; work         ;
+; |HDMI_test                                                         ; 476 (0)     ; 135 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 21   ; 0            ; 341 (0)      ; 5 (0)             ; 130 (0)          ; |HDMI_test                                                                                                         ; HDMI_test              ; work         ;
+;    |CreateHDMIOutputs:CHIO1|                                       ; 173 (35)    ; 74 (35)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 99 (0)       ; 4 (0)             ; 70 (35)          ; |HDMI_test|CreateHDMIOutputs:CHIO1                                                                                 ; CreateHDMIOutputs      ; work         ;
+;       |TMDS_encoder:encode_B|                                      ; 42 (42)     ; 13 (13)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 2 (2)             ; 11 (11)          ; |HDMI_test|CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B                                                           ; TMDS_encoder           ; work         ;
+;       |TMDS_encoder:encode_G|                                      ; 55 (55)     ; 13 (13)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 42 (42)      ; 2 (2)             ; 11 (11)          ; |HDMI_test|CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G                                                           ; TMDS_encoder           ; work         ;
+;       |TMDS_encoder:encode_R|                                      ; 41 (41)     ; 13 (13)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 13 (13)          ; |HDMI_test|CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R                                                           ; TMDS_encoder           ; work         ;
 ;       |altiobuf:altobuf_blueI|                                     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |HDMI_test|CreateHDMIOutputs:CHIO1|altiobuf:altobuf_blueI                                                          ; altiobuf               ; work         ;
 ;          |altiobuf_iobuf_out_cst:altiobuf_iobuf_out_cst_component| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |HDMI_test|CreateHDMIOutputs:CHIO1|altiobuf:altobuf_blueI|altiobuf_iobuf_out_cst:altiobuf_iobuf_out_cst_component  ; altiobuf_iobuf_out_cst ; work         ;
 ;       |altiobuf:altobuf_clock|                                     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |HDMI_test|CreateHDMIOutputs:CHIO1|altiobuf:altobuf_clock                                                          ; altiobuf               ; work         ;
@@ -818,14 +813,13 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ;       |altiobuf:altobuf_redI|                                      ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |HDMI_test|CreateHDMIOutputs:CHIO1|altiobuf:altobuf_redI                                                           ; altiobuf               ; work         ;
 ;          |altiobuf_iobuf_out_cst:altiobuf_iobuf_out_cst_component| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |HDMI_test|CreateHDMIOutputs:CHIO1|altiobuf:altobuf_redI|altiobuf_iobuf_out_cst:altiobuf_iobuf_out_cst_component   ; altiobuf_iobuf_out_cst ; work         ;
 ;    |HvSync:HVS1|                                                   ; 54 (54)     ; 28 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 1 (1)             ; 27 (27)          ; |HDMI_test|HvSync:HVS1                                                                                             ; HvSync                 ; work         ;
-;    |assighColor:comb_3|                                            ; 22 (22)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 22 (22)          ; |HDMI_test|assighColor:comb_3                                                                                      ; assighColor            ; work         ;
+;    |assighColor:AC1|                                               ; 8 (8)       ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 8 (8)            ; |HDMI_test|assighColor:AC1                                                                                         ; assighColor            ; work         ;
 ;    |pixelClk:pxlc|                                                 ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |HDMI_test|pixelClk:pxlc                                                                                           ; pixelClk               ; work         ;
 ;       |altpll:altpll_component|                                    ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |HDMI_test|pixelClk:pxlc|altpll:altpll_component                                                                   ; altpll                 ; work         ;
 ;          |pixelClk_altpll:auto_generated|                          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |HDMI_test|pixelClk:pxlc|altpll:altpll_component|pixelClk_altpll:auto_generated                                    ; pixelClk_altpll        ; work         ;
-;    |speedCluster:SPEED1|                                           ; 807 (522)   ; 74 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 731 (520)    ; 1 (0)             ; 75 (2)           ; |HDMI_test|speedCluster:SPEED1                                                                                     ; speedCluster           ; work         ;
-;       |rectangle:sP10mR|                                           ; 94 (94)     ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 69 (69)      ; 0 (0)             ; 25 (25)          ; |HDMI_test|speedCluster:SPEED1|rectangle:sP10mR                                                                    ; rectangle              ; work         ;
-;       |rectangle:sP5mR|                                            ; 95 (95)     ; 24 (24)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 71 (71)      ; 0 (0)             ; 24 (24)          ; |HDMI_test|speedCluster:SPEED1|rectangle:sP5mR                                                                     ; rectangle              ; work         ;
-;       |rectangle:sP7mR|                                            ; 96 (96)     ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 71 (71)      ; 1 (1)             ; 24 (24)          ; |HDMI_test|speedCluster:SPEED1|rectangle:sP7mR                                                                     ; rectangle              ; work         ;
+;    |speedCluster:SPEED1|                                           ; 242 (0)     ; 25 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 216 (0)      ; 0 (0)             ; 26 (0)           ; |HDMI_test|speedCluster:SPEED1                                                                                     ; speedCluster           ; work         ;
+;       |speedBar:s5mph|                                             ; 242 (150)   ; 25 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 216 (149)    ; 0 (0)             ; 26 (1)           ; |HDMI_test|speedCluster:SPEED1|speedBar:s5mph                                                                      ; speedBar               ; work         ;
+;          |rectangle:sP5mR|                                         ; 92 (92)     ; 25 (25)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 67 (67)      ; 0 (0)             ; 25 (25)          ; |HDMI_test|speedCluster:SPEED1|speedBar:s5mph|rectangle:sP5mR                                                      ; rectangle              ; work         ;
 +--------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -877,11 +871,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------+-------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                  ; Location          ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------------------------------------------------------------+-------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
-; HvSync:HVS1|DrawArea                                                                  ; FF_X25_Y16_N29    ; 64      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
-; HvSync:HVS1|Equal2~2                                                                  ; LCCOMB_X25_Y13_N2 ; 15      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
-; HvSync:HVS1|animate                                                                   ; FF_X25_Y33_N1     ; 74      ; Clock                   ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; HvSync:HVS1|DrawArea                                                                  ; FF_X29_Y20_N1     ; 47      ; Sync. clear, Sync. load ; no     ; --                   ; --               ; --                        ;
+; HvSync:HVS1|Equal2~3                                                                  ; LCCOMB_X29_Y21_N2 ; 12      ; Clock enable            ; no     ; --                   ; --               ; --                        ;
+; HvSync:HVS1|animate                                                                   ; FF_X25_Y31_N1     ; 25      ; Clock                   ; yes    ; Global Clock         ; GCLK10           ; --                        ;
 ; clk                                                                                   ; PIN_R8            ; 1       ; Clock                   ; no     ; --                   ; --               ; --                        ;
-; pixelClk:pxlc|altpll:altpll_component|pixelClk_altpll:auto_generated|wire_pll1_clk[0] ; PLL_4             ; 93      ; Clock                   ; yes    ; Global Clock         ; GCLK18           ; --                        ;
+; pixelClk:pxlc|altpll:altpll_component|pixelClk_altpll:auto_generated|wire_pll1_clk[0] ; PLL_4             ; 76      ; Clock                   ; yes    ; Global Clock         ; GCLK18           ; --                        ;
 ; pixelClk:pxlc|altpll:altpll_component|pixelClk_altpll:auto_generated|wire_pll1_clk[1] ; PLL_4             ; 35      ; Clock                   ; yes    ; Global Clock         ; GCLK19           ; --                        ;
 +---------------------------------------------------------------------------------------+-------------------+---------+-------------------------+--------+----------------------+------------------+---------------------------+
 
@@ -891,8 +885,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 ; Name                                                                                  ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +---------------------------------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; HvSync:HVS1|animate                                                                   ; FF_X25_Y33_N1 ; 74      ; 21                                   ; Global Clock         ; GCLK14           ; --                        ;
-; pixelClk:pxlc|altpll:altpll_component|pixelClk_altpll:auto_generated|wire_pll1_clk[0] ; PLL_4         ; 93      ; 26                                   ; Global Clock         ; GCLK18           ; --                        ;
+; HvSync:HVS1|animate                                                                   ; FF_X25_Y31_N1 ; 25      ; 9                                    ; Global Clock         ; GCLK10           ; --                        ;
+; pixelClk:pxlc|altpll:altpll_component|pixelClk_altpll:auto_generated|wire_pll1_clk[0] ; PLL_4         ; 76      ; 13                                   ; Global Clock         ; GCLK18           ; --                        ;
 ; pixelClk:pxlc|altpll:altpll_component|pixelClk_altpll:auto_generated|wire_pll1_clk[1] ; PLL_4         ; 35      ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
 +---------------------------------------------------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
@@ -902,164 +896,155 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 1,368 / 71,559 ( 2 % ) ;
-; C16 interconnects     ; 0 / 2,597 ( 0 % )      ;
-; C4 interconnects      ; 567 / 46,848 ( 1 % )   ;
-; Direct links          ; 375 / 71,559 ( < 1 % ) ;
+; Block interconnects   ; 520 / 71,559 ( < 1 % ) ;
+; C16 interconnects     ; 1 / 2,597 ( < 1 % )    ;
+; C4 interconnects      ; 240 / 46,848 ( < 1 % ) ;
+; Direct links          ; 130 / 71,559 ( < 1 % ) ;
 ; Global clocks         ; 3 / 20 ( 15 % )        ;
-; Local interconnects   ; 296 / 24,624 ( 1 % )   ;
-; R24 interconnects     ; 7 / 2,496 ( < 1 % )    ;
-; R4 interconnects      ; 628 / 62,424 ( 1 % )   ;
+; Local interconnects   ; 186 / 24,624 ( < 1 % ) ;
+; R24 interconnects     ; 2 / 2,496 ( < 1 % )    ;
+; R4 interconnects      ; 193 / 62,424 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.46) ; Number of LABs  (Total = 82) ;
+; Number of Logic Elements  (Average = 12.53) ; Number of LABs  (Total = 38) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 1                            ;
+; 1                                           ; 3                            ;
 ; 2                                           ; 1                            ;
-; 3                                           ; 1                            ;
+; 3                                           ; 0                            ;
 ; 4                                           ; 1                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 2                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
 ; 8                                           ; 1                            ;
-; 9                                           ; 2                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 1                            ;
-; 12                                          ; 13                           ;
-; 13                                          ; 8                            ;
-; 14                                          ; 8                            ;
-; 15                                          ; 9                            ;
-; 16                                          ; 33                           ;
+; 9                                           ; 1                            ;
+; 10                                          ; 0                            ;
+; 11                                          ; 0                            ;
+; 12                                          ; 5                            ;
+; 13                                          ; 3                            ;
+; 14                                          ; 2                            ;
+; 15                                          ; 2                            ;
+; 16                                          ; 18                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 0.66) ; Number of LABs  (Total = 82) ;
+; LAB-wide Signals  (Average = 0.92) ; Number of LABs  (Total = 38) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 36                           ;
+; 1 Clock                            ; 22                           ;
 ; 1 Clock enable                     ; 1                            ;
-; 1 Sync. clear                      ; 10                           ;
+; 1 Sync. clear                      ; 6                            ;
 ; 1 Sync. load                       ; 3                            ;
-; 2 Clocks                           ; 4                            ;
+; 2 Clocks                           ; 3                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 12.43) ; Number of LABs  (Total = 82) ;
+; Number of Signals Sourced  (Average = 13.50) ; Number of LABs  (Total = 38) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 10                           ;
-; 2                                            ; 4                            ;
-; 3                                            ; 4                            ;
-; 4                                            ; 5                            ;
-; 5                                            ; 1                            ;
-; 6                                            ; 4                            ;
+; 1                                            ; 3                            ;
+; 2                                            ; 3                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 2                            ;
+; 5                                            ; 4                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 4                            ;
-; 9                                            ; 1                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 4                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 5                            ;
-; 14                                           ; 3                            ;
-; 15                                           ; 3                            ;
-; 16                                           ; 3                            ;
-; 17                                           ; 4                            ;
-; 18                                           ; 2                            ;
-; 19                                           ; 5                            ;
-; 20                                           ; 3                            ;
-; 21                                           ; 3                            ;
-; 22                                           ; 2                            ;
-; 23                                           ; 3                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 2                            ;
+; 12                                           ; 2                            ;
+; 13                                           ; 1                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 3                            ;
+; 19                                           ; 3                            ;
+; 20                                           ; 1                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 1                            ;
+; 23                                           ; 0                            ;
 ; 24                                           ; 0                            ;
-; 25                                           ; 2                            ;
-; 26                                           ; 0                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 2                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
-; 29                                           ; 1                            ;
+; 28                                           ; 2                            ;
+; 29                                           ; 0                            ;
 ; 30                                           ; 2                            ;
-; 31                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.74) ; Number of LABs  (Total = 82) ;
+; Number of Signals Sourced Out  (Average = 6.32) ; Number of LABs  (Total = 38) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 16                           ;
-; 2                                               ; 8                            ;
-; 3                                               ; 7                            ;
+; 1                                               ; 6                            ;
+; 2                                               ; 6                            ;
+; 3                                               ; 5                            ;
 ; 4                                               ; 2                            ;
-; 5                                               ; 1                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 3                            ;
-; 8                                               ; 4                            ;
-; 9                                               ; 2                            ;
-; 10                                              ; 2                            ;
-; 11                                              ; 10                           ;
-; 12                                              ; 5                            ;
-; 13                                              ; 6                            ;
-; 14                                              ; 3                            ;
-; 15                                              ; 3                            ;
-; 16                                              ; 7                            ;
-; 17                                              ; 0                            ;
-; 18                                              ; 0                            ;
-; 19                                              ; 1                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 1                            ;
+; 8                                               ; 3                            ;
+; 9                                               ; 0                            ;
+; 10                                              ; 1                            ;
+; 11                                              ; 3                            ;
+; 12                                              ; 2                            ;
+; 13                                              ; 3                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 2                            ;
+; 16                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 15.96) ; Number of LABs  (Total = 82) ;
+; Number of Distinct Inputs  (Average = 13.16) ; Number of LABs  (Total = 38) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
+; 1                                            ; 1                            ;
 ; 2                                            ; 1                            ;
 ; 3                                            ; 2                            ;
-; 4                                            ; 3                            ;
-; 5                                            ; 1                            ;
+; 4                                            ; 2                            ;
+; 5                                            ; 2                            ;
 ; 6                                            ; 1                            ;
 ; 7                                            ; 1                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 5                            ;
+; 8                                            ; 1                            ;
+; 9                                            ; 2                            ;
 ; 10                                           ; 3                            ;
-; 11                                           ; 4                            ;
-; 12                                           ; 11                           ;
-; 13                                           ; 10                           ;
-; 14                                           ; 3                            ;
-; 15                                           ; 2                            ;
-; 16                                           ; 4                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 3                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 7                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 2                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 1                            ;
 ; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
 ; 22                                           ; 0                            ;
 ; 23                                           ; 0                            ;
-; 24                                           ; 12                           ;
-; 25                                           ; 2                            ;
-; 26                                           ; 2                            ;
+; 24                                           ; 3                            ;
+; 25                                           ; 1                            ;
+; 26                                           ; 1                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
-; 29                                           ; 3                            ;
-; 30                                           ; 1                            ;
-; 31                                           ; 2                            ;
-; 32                                           ; 0                            ;
-; 33                                           ; 0                            ;
-; 34                                           ; 1                            ;
-; 35                                           ; 0                            ;
-; 36                                           ; 1                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 3                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1190,7 +1175,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------+--------------------------------------------------+-------------------+
 ; Source Clock(s)                                  ; Destination Clock(s)                             ; Delay Added in ns ;
 +--------------------------------------------------+--------------------------------------------------+-------------------+
-; pxlc|altpll_component|auto_generated|pll1|clk[0] ; pxlc|altpll_component|auto_generated|pll1|clk[1] ; 4.6               ;
+; pxlc|altpll_component|auto_generated|pll1|clk[0] ; pxlc|altpll_component|auto_generated|pll1|clk[1] ; 3.0               ;
 +--------------------------------------------------+--------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1201,26 +1186,22 @@ This will disable optimization of problematic paths and expose them for further 
 +-------------------------------------------------------+----------------------------------------------+-------------------+
 ; Source Register                                       ; Destination Register                         ; Delay Added in ns ;
 +-------------------------------------------------------+----------------------------------------------+-------------------+
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[9] ; CreateHDMIOutputs:CHIO1|TMDS_shift_redI[9]   ; 0.258             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[9] ; CreateHDMIOutputs:CHIO1|TMDS_shift_greenI[9] ; 0.258             ;
 ; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[9] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[9]  ; 0.258             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[2] ; CreateHDMIOutputs:CHIO1|TMDS_shift_redI[2]   ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[4] ; CreateHDMIOutputs:CHIO1|TMDS_shift_redI[4]   ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[6] ; CreateHDMIOutputs:CHIO1|TMDS_shift_redI[6]   ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[2] ; CreateHDMIOutputs:CHIO1|TMDS_shift_greenI[2] ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[4] ; CreateHDMIOutputs:CHIO1|TMDS_shift_greenI[4] ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[6] ; CreateHDMIOutputs:CHIO1|TMDS_shift_greenI[6] ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[0] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[0]  ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[1] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[1]  ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[2] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[2]  ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[3] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[3]  ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[4] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[4]  ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[5] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[5]  ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[6] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[6]  ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[7] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[7]  ; 0.257             ;
-; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[8] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[8]  ; 0.257             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[2] ; CreateHDMIOutputs:CHIO1|TMDS_shift_greenI[2] ; 0.256             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[4] ; CreateHDMIOutputs:CHIO1|TMDS_shift_greenI[4] ; 0.256             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_G|TMDS[6] ; CreateHDMIOutputs:CHIO1|TMDS_shift_greenI[6] ; 0.256             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[4] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[4]  ; 0.256             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[1] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[5]  ; 0.256             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[6] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[6]  ; 0.256             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[7] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[7]  ; 0.256             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_B|TMDS[8] ; CreateHDMIOutputs:CHIO1|TMDS_shift_blueI[8]  ; 0.256             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[9] ; CreateHDMIOutputs:CHIO1|TMDS_shift_redI[9]   ; 0.177             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[1] ; CreateHDMIOutputs:CHIO1|TMDS_shift_redI[1]   ; 0.174             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[3] ; CreateHDMIOutputs:CHIO1|TMDS_shift_redI[3]   ; 0.174             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[0] ; CreateHDMIOutputs:CHIO1|TMDS_shift_redI[0]   ; 0.054             ;
+; CreateHDMIOutputs:CHIO1|TMDS_encoder:encode_R|TMDS[2] ; CreateHDMIOutputs:CHIO1|TMDS_shift_redI[6]   ; 0.044             ;
 +-------------------------------------------------------+----------------------------------------------+-------------------+
-Note: This table only shows the top 18 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 14 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1307,14 +1288,14 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 8% of the available device resources in the region that extends from location X21_Y11 to location X31_Y22
+    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X21_Y11 to location X31_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.74 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.45 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1323,10 +1304,10 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/wezerds/Documents/GitHub/HDMITest/output_files/HDMITest.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 45 warnings
-    Info: Peak virtual memory: 5846 megabytes
-    Info: Processing ended: Wed Jan 01 21:19:34 2020
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 5835 megabytes
+    Info: Processing ended: Wed Jan 01 22:18:42 2020
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +----------------------------+
