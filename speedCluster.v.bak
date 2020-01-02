@@ -1,0 +1,19 @@
+module speedCluster(wire output pixRd);
+	
+	wire [11:0] sP5mx1, sP5mx2, sP5my1, sP5my2, sP7mx1, sP7my1, sP7mx2, sP7my2;
+	wire display;
+	reg goAnimate=0;
+
+	rectangle #(.H_HIGHT(74), .H_WIDTH(16), .IX(515), .IY(351)) sP5mR (.i_animate(animate), .goAnimate(goAnimate), .o_x1(sP5mx1), .o_x2(sP5mx2), .o_y1(sP5my1), .o_y2(sP5my2), .display(sP5mDis));
+	rectangle #(.H_HIGHT(74), .H_WIDTH(16), .IX(500), .IY(350)) sP7mR (.i_animate(animate), .goAnimate(goAnimate), .o_x1(sP7mx1), .o_x2(sP7mx2), .o_y1(sP7my1), .o_y2(sP7my2), .display(sP7mDis));
+
+	wire [3:0] sP5m, sP5mf, sP7m, sP7mf;
+	
+	//set color
+	assign sP5m = ((x>sP5mx1)&(y>sP5my1)&(x<sP5mx2)&(y<sP5my2)&sP5mDis) ? 'h4 : 0;
+	assign sP5mf = ((x>sP5mx1+3)&(y>sP5my1+3)&(x<sP5mx2-3)&(y<sP5my2-3)&sP5mDis) ? 'h1 : 0;
+	assign sP7m = ((x>sP7mx1)&(y>sP7my1)&(x<sP7mx2)&(y<sP7my2)&sP7mDis) ? 'h4 : 0;
+	assign sP7mf = ((x>sP7mx1+3)&(y>sP7my1+3)&(x<sP7mx2-3)&(y<sP7my2-3)&sP7mDis) ? 'h1 : 0;
+	assign pixRd = ((sP5m-sP5mf)+(sP7m-sP7mf));
+
+endmodule

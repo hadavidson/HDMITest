@@ -1,0 +1,26 @@
+module assighColor(input wire pixclk, DrawArea, input wire [3:0] pixRd, output wire [7:0] red. green, blue);
+	always @(posedge pixclk)
+	begin
+		//which color to assigh (works)
+		if(DrawArea)
+		begin
+			case(pixRd)
+				4'h0: begin red <= 0;green <= 0; blue<= 0; end				//black
+				4'h1: begin red <= 219; green <=32; blue<= 62; end			//on red
+				4'h2: begin red <= 77; green <= 25; blue<= 27; end			//off red
+				4'h3: begin red <= 168; green <= 176; blue<= 67; end		//on green
+				4'h4: begin red <= 43; green <= 51; blue<= 20; end			//off green
+				4'h5: begin red <= 255; green <= 169; blue<= 0; end		//on orange
+				4'h6: begin red <= 71; green <= 40; blue<= 18; end			//off orange
+				4'h7: begin red <= 255; green <= 255; blue<= 255; end		//white
+				default: begin red <= 127;green <= 127; blue<= 127; end	//grey
+			endcase
+		end
+		else
+		begin
+			 red <= 0;
+			 green <= 0;
+			 blue<= 0;
+		end
+	end
+endmodule

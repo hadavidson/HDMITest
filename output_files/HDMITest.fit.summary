@@ -1,14 +1,14 @@
-Fitter Status : Successful - Wed Jan 01 11:09:08 2020
+Fitter Status : Successful - Wed Jan 01 21:19:34 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : HDMITest
 Top-level Entity Name : HDMI_test
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 266 / 22,320 ( 1 % )
-    Total combinational functions : 262 / 22,320 ( 1 % )
-    Dedicated logic registers : 125 / 22,320 ( < 1 % )
-Total registers : 125
+Total logic elements : 1,104 / 22,320 ( 5 % )
+    Total combinational functions : 1,090 / 22,320 ( 5 % )
+    Dedicated logic registers : 201 / 22,320 ( < 1 % )
+Total registers : 201
 Total pins : 21 / 154 ( 14 % )
 Total virtual pins : 0
 Total memory bits : 0 / 608,256 ( 0 % )
